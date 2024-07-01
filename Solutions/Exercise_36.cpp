@@ -1,12 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int isPowerOfTwo(int n) {
+int factorial(int n) {
     
-    if (!(n & (n-1))) {
-        return 1;
+    int F[n+1];
+    F[0] = 1;
+    
+    for (int i = 1; i <=n ; i++) {
+        F[i] = F[i-1]*i;
     }
-    else {
-        return 0;
-    }
+    return F[n];
 }

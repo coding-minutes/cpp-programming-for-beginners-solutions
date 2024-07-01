@@ -1,22 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
-int sumOfElement(vector<vector<int>> matrix) {
+int binary_to_decimal(string binaryInteger) {
+    int decimalInteger = 0;
     
-    int sum = 0;
+    int size = binaryInteger.size();
     
-    for (int i = 0; i < matrix.size(); i++) {
-        int check = 0;
-        for (int j = 0; j < matrix[i].size(); j++) {
-            if (i == j) {
-                check = 1;
-            }
-            if (check == 0) {
-                sum += matrix[i][j];
-            }
-        }
+    for (int i = 0; i < size; i++) {
+         if (binaryInteger[i] == '1') {
+             decimalInteger += (1 << (size - i - 1));
+         }
     }
     
-    return sum;
+    return decimalInteger;
 }

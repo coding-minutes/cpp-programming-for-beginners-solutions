@@ -1,29 +1,31 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int isPalindrome(string s) {
-    
-    int n = s.size();
-    
-    if ((n&1)) {
-        string s1 = s.substr(0, n/2);
-        string s2 = s.substr(n/2+1);
-        reverse(s2.begin(), s2.end());   
-        if (s1 == s2) {
-            return 1;
+void mainFn() {
+    int n ; cin >> n ;
+    int i, j, num = 1, gap;
+    gap = n - 1;
+ 
+    for ( j = 1 ; j <= n ; j++ )
+    {
+        num = j;
+        for ( i = 1 ; i <= gap ; i++ )
+            cout << " ";
+ 
+        gap --;
+        for ( i = 1 ; i <= j ; i++ )
+        {
+            cout << num;
+            num++;
         }
-        
-        return 0;
-    }
-    else {
-        string s1 = s.substr(0, n/2);
-        string s2 = s.substr(n/2);
-        reverse(s2.begin(), s2.end());    
-        if (s1 == s2) {
-            return 1;
+        num--;
+        num--;
+        for ( i = 1 ; i < j ; i++)
+        {
+            cout << num;
+            num--;
         }
-        
-        return 0;
+        cout << "\n";
+   
     }
-    
 }

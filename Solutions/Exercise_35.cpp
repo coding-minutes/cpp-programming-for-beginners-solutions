@@ -1,13 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int countSetBit(int n) {
-    int count = 0;
-    for (int i = 0; i <= 30; i++) {
-         if (n & (1 << i)) {
-             count++;
-         }
+int is_prime(int n) {
+    if (n == 1) {
+        return 0;
     }
-    return count;
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            return 0;
+        }
+    }
+    return 1;
 }
-

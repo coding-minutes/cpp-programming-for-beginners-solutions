@@ -1,24 +1,12 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-char largestFrequencyCharacter (char c[], int size) {
-    
-     
-     unordered_map < char, int > freq;
-     
-     for (int i = 0; i < size; i++) {
-         freq[c[i]]++;
-     }
-     
-     char cc;
-     
-     int maxFreq = 0;
-     
-     for (auto element : freq) {
-         if (element.second > maxFreq) {
-             maxFreq = element.second;
-             cc = element.first;
-         }
-     }
-     return cc;
+void mainFn() {
+    int n ; cin >> n ;
+    for(int i=1;i<=n;i++) {
+        for(int j=1;j<=i;j++) {
+            cout << i  ;
+        }
+        cout << "\n" ;
+    }
 }

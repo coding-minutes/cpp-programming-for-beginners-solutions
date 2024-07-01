@@ -1,12 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int fibonacci (int n) {
-    if ( n == 0 || n == 1) {
-        return 1;
+int greatestCommonDivisor (int x, int y) {
+    
+    if (y == 0) {
+        return x;
     }
-    else {
-        return fibonacci(n-1) + fibonacci(n-2);
-    }
-     
+    
+    return greatestCommonDivisor (y, x % y);
 }

@@ -1,19 +1,17 @@
 #include<bits/stdc++.h>
-using namespace std;
+using namespace std ;
 
-int sumOfDiagonalElement(vector<vector<int>> A) {
-    
-    int r = A.size();
-    int c = A[0].size();
-    
-    int sum = 0;
-    
-    for (int i = 0; i < r; i++) {
-        for (int j = 0; j < c; j++) {
-            if (i == j) {
-                sum += A[i][j];
-            }
-        }
+int isPrime(int num)
+{
+    for (int i = 2; i*i <= num; ++i)
+    {
+        if (num%i == 0) return 0;
     }
-    return sum;
+    return 1;
+}
+void printPrimes(int N) {
+    for (int i = 2; i <= N; ++i)
+    {
+        if (isPrime(i) == 1) cout << i << " ";
+    }
 }

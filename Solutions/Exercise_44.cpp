@@ -1,9 +1,23 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int C(int n, int k) {
-    if (k == 0 || k == n) {
-        return 1;
+int noOfTrailingZeroes(int num)
+{
+    if (num == 0) return 1;
+    int trailingZeroesCount = 0;
+    
+    while (num > 0)
+    {
+        if (num%10 == 0)
+        {
+            ++trailingZeroesCount;
+            num /= 10;
+        } 
+        else 
+        {
+            break;
+        }
     }
-    return C(n-1, k-1) + C(n-1, k);
+    
+    return trailingZeroesCount;
 }

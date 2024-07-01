@@ -1,13 +1,9 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-
-int greatestCommonDivisor (int x, int y) {
-    
-    if (y == 0) {
-        return x;
-    }
-    
-    return greatestCommonDivisor (y, x % y);
-    
+void mainFn() {
+    float p,r,t; 
+    cin >> p >> r >> t;
+    int ans = (p*r*t)/100;
+    cout << ans;    
 }

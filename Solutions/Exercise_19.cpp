@@ -1,23 +1,22 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int numberOfOne(vector<int> array) {
+void mainFn() {
+    int n; 
+    cin >> n;
+    int c3=0,c5=0;
     
-    int low = 0, high = array.size()-1;
-    
-    int ans = high+1;
-    
-    while (low <= high) {
-          int mid = (low + high)/2;
-          if (array[mid] == 1) {
-              ans = mid;
-              high = mid-1;
-          }
-          else {
-              low = mid+1;
-          }
+    for(int i=1;i<=n;i++){
+        c3++ ; c5++ ;
+        string d="" ;
+        if(c3==3){
+            c3=0 ;d+="Fizz" ;
+        }
+            if(c5==5){
+            c5=0 ;d+="Buzz" ;
+        }
+        string a=to_string(i) ;
+        if(d=="") cout << a << " " ;
+        else cout << d << " " ;
     }
-    
-    return (array.size()) - ans;
-    
 }

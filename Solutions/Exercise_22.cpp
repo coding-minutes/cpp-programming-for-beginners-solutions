@@ -1,24 +1,13 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int checkProductSign(vector<vector<int>> matrix) {
+void mainFn() {
+    int n ; cin >> n ;
+    int F[n+1];
+    F[0] = 1;
     
-    int ans = 1;
-    
-    int row = matrix.size();
-    int column = matrix[0].size();
-    
-    for (int i = 0; i < row; i++) {
-        for (int j = 0; j < column; j++) {
-             if (matrix[i][j] < 0) {
-                 ans = ans * (-1);
-             }
-             if (matrix[i][j] == 0) {
-                 ans  = 0;
-             }
-        }
+    for (int i = 1; i <=n ; i++) {
+        F[i] = F[i-1]*i;
     }
-    
-    return (ans >= 0);
-    
+    cout << F[n];
 }
