@@ -1,19 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int square(int n)
-{
-   
-    if (n == 0)
-        return 0;
- 
-   
- 
-    int x = n >> 1;
- 
-    if (n & 1)
-        return ((square(x) << 2) + (x << 2) + 1);
-    else 
-        return (square(x) << 2);
+int power(int x, int y) {
     
+    int ans = 1;
+    for (int i = 1; i <= y; i++) {
+        ans = ans * x;
+    }
+    return ans;
 }

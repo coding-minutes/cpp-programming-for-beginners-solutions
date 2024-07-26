@@ -1,25 +1,17 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-
-char largestFrequencyCharacter(string s) {
-     
-     unordered_map< char, int> freq;
-     
-     for (int i = 0; i < int (s.size()); i++) {
-         freq[s[i]]++;
-     }
-     
-     int maxFreq = INT_MIN;
-     char maxFreqChar = '#';
-     
-     for (auto i : freq) {
-          if (i.second > maxFreq) {
-              maxFreq = i.second;
-              maxFreqChar = i.first;
-          }
-     }
-     
-     return maxFreqChar;
-     
+void mainFn() {
+    int n ; cin >> n ;
+    for(int i=1;i<=n;i++) {
+        int temp=i ;
+        
+        for(int j=1;j<=i;j++) {
+            cout <<  temp%2 ;
+            temp++ ;
+        }
+        
+        cout << "\n" ;
+        
+    }   
 }

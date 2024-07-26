@@ -1,21 +1,17 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include<string>
 using namespace std;
 
-int squareRoot(int n) {
-    
-    int l = 1, r = n;
-    
-    int ans = 1;
-    
-    while (l <= r) {
-        int mid = (l+r)/2;
-        if (mid * mid <= n) {
-            ans = mid;
-            l = mid+1;
-        }
-        else {
-            r = mid-1;
-        }
+void mainFn() {
+    int n ; cin >> n;
+    int sumOdd = 0; 
+ 
+    string num = to_string(n);
+ 
+    for(int i = 0; i < num.size(); i++)
+    {
+        if (i % 2 == 0)
+            sumOdd = sumOdd + (int(num[i]) - 48);
     }
-    return ans;
+    cout << sumOdd;
 }

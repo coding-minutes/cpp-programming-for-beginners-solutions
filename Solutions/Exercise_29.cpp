@@ -1,14 +1,30 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-vector<vector<int>> rotateTheMatrix(vector<vector<int>> matrix) {
-     
-     vector<vector<int>> v (matrix.size(), vector<int>(matrix[0].size(), 0));
-     
-     for (int i = matrix.size()-1; i >= 0; i--) {
-         for (int j = 0; j < matrix[i].size(); j++) {
-             v[j][(matrix.size()-1-i)] = matrix[i][j];
-         }
-     }
-     return v;
+void mainFn() {
+    int n ; cin >> n ;
+    int st=1;
+    int sp=n/2 ;
+    for(int i=1;i<=n;i++) {
+        
+        for(int j=1;j<=sp;j++) {
+            cout << " "  ;
+        }
+        
+        for(int j=1;j<=st;j++) {
+            cout << "*"  ;
+        }
+        
+        cout << "\n" ;
+        
+        if(i<=n/2) {
+            sp-- ;
+            st+=2 ;  
+        }
+        else {
+            sp++ ;
+            st-=2 ;
+        }
+        
+    }   
 }

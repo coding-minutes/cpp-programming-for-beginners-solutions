@@ -1,15 +1,11 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <iomanip>
 using namespace std;
 
-
-int is_prime(int n) {
-    if (n == 1) {
-        return 0;
-    }
-    for (int i = 2; i * i <= n; i++) {
-        if (n % i == 0) {
-            return 0;
-        }
-    }
-    return 1;
+void mainFn() {
+    float a,b,c,d,e;
+    cin >>a >> b >> c >> d >> e ;
+    float t=a+b+c+d+e ;
+    float ans=t/5;
+    cout << fixed << setprecision(2) << ans ; 
 }

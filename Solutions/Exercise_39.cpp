@@ -1,14 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
-int singleFrequencyElement(vector<int> A) {
+int getProduct(int a,int b)
+{
+    int sum = 0;
     
-    int xorValue = 0;
-    
-    for (auto element : A) {
-        xorValue = xorValue ^ element;
+    for (int i = 1; i <= a; i++)  
+    {
+        sum += b;
     }
-    
-    return xorValue;
+    return sum;
 }

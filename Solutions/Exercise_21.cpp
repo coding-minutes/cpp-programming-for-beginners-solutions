@@ -1,24 +1,18 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int numberOfZeros(vector<vector<int>> matrix) {
+void mainFn() {
+    int n ; cin >> n;
+    int sum=0,temp=n ;
     
-    if (matrix.size() == 0) {
-        return 0;
-    }
+    while(n>0) {
+        int r=n%10;    
+        sum=sum+(r*r*r);    
+        n=n/10;    
+    } 
     
-    int  rows = matrix.size();
-    int columns = matrix[0].size();
-    
-    int count = 0;
-    
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < columns; j++) {
-            if (matrix[i][j] == 0) {
-                count++;
-            }
-        }
-    }
-    return count;
-    
+    if(temp==sum)    
+    cout << 1 ; 
+    else    
+    cout << 0;  
 }

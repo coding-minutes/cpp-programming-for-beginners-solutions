@@ -1,11 +1,30 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int kthSmallest(int A[], int k, int sizeOfArray) {
+void mainFn() {
     
+    int a ; cin >> a;
+    char c ; cin >> c;
+    int b ; cin >> b;
     
-    sort(A, A+sizeOfArray);
+    int res=0;
     
-    return A[k-1];
+    switch(c){
+        case '+':
+            res=a+b;
+            break;
+        case '-':
+            res=a-b;
+            break;
+        case '*':
+            res=a*b;
+            break;
+        case '/':
+            res=a/b;
+            break;
+        default:
+            break;
+    }
     
+    cout << res ;
 }

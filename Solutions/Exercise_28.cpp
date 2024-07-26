@@ -1,13 +1,23 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int countOfDifferentCharacters(char C[], int size) {
-    unordered_map < char, int > freq;
-    
-    for (int i = 0; i < size; i++) {
-        freq[C[i]]++;
+void mainFn() {
+    int n ; cin >> n ;
+    int st=1;
+    int sp=n-1 ;
+    for(int i=1;i<=n;i++) {
+        
+        for(int j=1;j<=sp;j++) {
+            cout << " "  ;
+        }
+        
+        for(int j=1;j<=st;j++) {
+            cout << "*"  ;
+        }
+        
+        cout << "\n" ;
+        
+        sp-- ;
+        st+=2 ;
     }
-    
-    return freq.size();
-    
 }

@@ -1,17 +1,14 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int findMissingNumber(int A[], int sizeOfArray) {
-    int n = sizeOfArray;
+void mainFn() {
     
-    int sum = 0;
+    int a,b,c,d,e ; cin >> a >> b >> c >> d >> e ;
+    float marks= (a+b+c+d+e)/5 ;
     
-    for (int i = 0; i < sizeOfArray; i++) {
-        sum += A[i];
-    }
-    
-    int missingNumber = (n+1)*(n+2)/2 - sum;
-    
-    return missingNumber;
-    
+    if (marks>=90) cout << "A+" ;
+    else if (marks>=80 && marks<90) cout << "A" ;
+    else if (marks>=70 && marks<80) cout << "B" ;
+    else if (marks>=60 && marks<70) cout << "C" ;
+    else cout << "D" ;
 }

@@ -1,20 +1,9 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int elementPresentOrNot(vector<int> array, int element) {
-    int low = 0, high = array.size() - 1;
-    
-    while (low <= high) {
-        int mid = ( low + high ) / 2;
-        if (array[mid] > element) {
-            high = mid-1;
-            continue;
-        }
-        if (array[mid] < element) {
-            low = mid +1;
-            continue;
-        }
-        return 1;
-    }
-    return 0;
+int largest (int n, int arr[])
+{
+    int res = -1;
+    for(int i=0; i<n; i++) res = max(res, arr[i]);
+    return res;
 }

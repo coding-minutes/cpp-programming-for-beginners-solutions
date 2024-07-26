@@ -1,9 +1,18 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-
-int calculateMedian(int A[], int sizeOfArray) {
-    
-    return A[((sizeOfArray-1) / 2)];
-    
+void mainFn() {
+    int p,t,r; 
+    cin >> p >> t;
+    float si;
+   
+    if(t<3) {
+        r=5;
+    }
+    else {
+        r=6;
+    }
+   
+    si= (float)(p*r*t)/100;
+    cout << si;
 }

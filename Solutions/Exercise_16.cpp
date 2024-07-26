@@ -1,23 +1,15 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int frequencyOfLargestElement (vector<int> A) {
-    
-    int low = 0, high = A.size() - 1;
-    
-    int largestEle = A[high];
-    
-    int ans = 0;
-    
-    while (low <= high) {
-        int mid = ( low + high ) / 2;
-        if (A[mid] == largestEle) {
-              ans = mid;
-              high = mid-1;
-        }
-        else {
-           low = mid+1;
-        }
+void mainFn() {
+    int n; 
+    cin >> n;
+
+    int sum = 0;
+
+    while (n != 0) {
+        sum = sum + n % 10;
+        n = n / 10;
     }
-    return (A.size() - ans);
+    cout<< sum;
 }

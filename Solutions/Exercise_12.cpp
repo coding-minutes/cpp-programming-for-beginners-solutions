@@ -1,16 +1,34 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-
-pair<int, int> largestAndSmallest(int A[], int sizeOfArray) {
-         int minElement = INT_MAX;
-         int maxElement = INT_MIN;
-         
-         for (int i = 0; i < sizeOfArray; i++) {
-             int element = A[i];
-             minElement = min(minElement, element);
-             maxElement = max(maxElement, element);
-         }
-         
-         return make_pair(maxElement, minElement);
+void mainFn() {
+    
+    int units; 
+    cin >> units;
+    int ans=0;
+    
+    if (units <= 50)
+    {
+        ans=units * 20;
+    }
+    else if (units <= 100)
+    {
+        ans= (50 * 20) +
+               (units - 50) * 30;
+    }
+    else if (units <= 150)
+    {
+        ans=(50* 20) +
+               (50 * 30) +
+               (units - 100) * 40;
+    }
+    else if (units > 150)
+    {
+        ans= (50 * 20) +
+               (50 * 30) +
+               (50 * 40) +
+               (units - 150) * 50;
+    }
+    
+    cout << ans;
 }
